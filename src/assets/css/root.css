@@ -1446,7 +1446,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-    transition: width 0.3s;
   }
   #hero-1950 .cs-button-solid:hover:before {
     width: 100%;
@@ -2582,7 +2581,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-    transition: width 0.3s;
   }
   #cta-1072 .cs-button-solid:hover:before {
     width: 100%;
@@ -2604,7 +2602,6 @@
     z-index: 1;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
-    transition: color 0.3s;
   }
   #cta-1072 .cs-button-transparent:before {
     content: "";
@@ -2616,7 +2613,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-    transition: width 0.3s;
   }
   #cta-1072 .cs-button-transparent:after {
     /* border */
@@ -2631,7 +2627,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-    transition: width 0.3s;
     pointer-events: none;
   }
   #cta-1072 .cs-button-transparent:hover {
