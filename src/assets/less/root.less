@@ -1693,7 +1693,7 @@
                 content: '';
                 width: 0%;
                 height: 100%;
-                background: #000;
+                background: #ffffff;
                 opacity: 1;
                 display: block;
                 position: absolute;
@@ -1706,6 +1706,7 @@
                 &:before {
                     width: 100%;
                 }
+                color: var(--primary);
             }
         }
 
@@ -1794,7 +1795,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #services-2198 {
-        padding: var(--sectionPadding);
+        padding: 40px;
         background-color: #FDFAF8;
         position: relative;
         
@@ -2035,13 +2036,14 @@
                 left: 0;
                 z-index: -1;
                 border-radius: (4/16rem);
-                transition: width 0.3s;
             }
 
             &:hover {
                 &:before {
                     width: 100%;
                 }
+                color: var(--primary);
+                border-radius: (4/16rem);
             }
         }
 
@@ -3311,8 +3313,173 @@
     }
 
 }
+.cs-button-solid{
+    border-radius: (4/16rem);
+    &:hover {
+        border-radius: (4/16rem);
+    }
+}                               
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-26 {
+        /* Centers the button */
+        text-align: center;
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-card-group {
+            width: 100%;
+            /* changes to 100% at tablet */
+            max-width: (500/16rem);
+            margin: 0;
+            padding: 0;
+            border: 1px solid #a0a3bd;
+        }
+
+        .cs-item {
+            width: 100%;
+            margin: auto;
+            list-style: none;
+            border-bottom: 1px solid #a0a3bd;
+            background-color: #fff;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: var(--primary);
+
+                .cs-icon {
+                    filter: grayscale(1) brightness(1000%);
+                }
+
+                .cs-h3 {
+                    color: #fff;
+                }
+            }
+        }
+
+        .cs-link {
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            padding-top: (56/16rem);
+            padding-bottom: (52/16rem);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            /* Prevents padding from affecting height */
+            box-sizing: border-box;
+        }
+
+        .cs-icon {
+            margin-bottom: (18/16rem);
+        }
+
+        .cs-hover {
+            display: none;
+        }
+
+        .cs-h3 {
+            font-size: (20/16rem);
+            line-height: 1.2em;
+            font-weight: 400;
+            text-align: center;
+            margin: 0;
+            color: var(--headerColor);
+            transition: color 0.3s;
+        }
+    }
+}
+
+/* In Between - 500px */
+@media only screen and (min-width: 31.25rem) {
+    #services-26 {
+        .cs-card-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cs-item {
+            width: 50%;
+            max-width: (295/16rem);
+            border-bottom: none;
+            /* Makes borders not affect widths */
+            box-sizing: border-box;
+
+            &:nth-of-type(1) {
+                border-right: 1px solid #a0a3bd;
+                border-bottom: 1px solid #a0a3bd;
+            }
+            &:nth-of-type(2) {
+                border-bottom: 1px solid #a0a3bd;
+            }
+            &:nth-of-type(3) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-26 {
+        .cs-card-group {
+            max-width: 100%;
+            border: none;
+        }
+        .cs-item {
+            height: (200/16rem);
+            width: 33.33%;
+            margin: 0;
+
+            &:nth-of-type(1) {
+                border: none;
+                border: 1px solid #a0a3bd;
+            }
+            &:nth-of-type(2) {
+                border: none;
+                border-top: 1px solid #a0a3bd;
+                border-bottom: 1px solid #a0a3bd;
+                border-right: 1px solid #a0a3bd;
+            }
+            &:nth-of-type(3) {
+                width: 33.33%;
+                border: none;
+                border-top: 1px solid #a0a3bd;
+                border-bottom: 1px solid #a0a3bd;
+                border-right: 1px solid #a0a3bd;
+            }
+        }
+
+        .cs-link {
+            padding: (36/16rem) 0;
+        }
+
+        .cs-icon {
+            margin-bottom: (28/16rem);
+        }
+    }
+}
+
                                 
 
+                                
                                 
                                                                
                                 
