@@ -78,25 +78,33 @@ eleventyNavigation:
     <!--                    Hero                      -->
     <!-- ============================================ -->
 
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">Explore the best of Palawan</span>
-                <h1 class="cs-title">Tours, accomodation and transfers based in San Vicente</h1>
-                <p class="cs-text">
-                    Immerse yourself in the beauty of Palawan and its culture
-                </p>
-                <a href="/tour1" class="cs-button-solid">Plan your trip here</a>
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1786">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Experience the best of Palawan</span>
+            <h1 class="cs-title">Palawan Tours</h1>
+            <p class="cs-text">
+                Tours, Transfers, and Accomodation based in the beautiful region of San Vicente
+            </p>
+            <div class="cs-button-group">
+                <a href="/tour1" class="cs-button-solid cs-button1">Plan your trip here</a>
             </div>
         </div>
+    </div>
 
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/tress.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/tress.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/tress.jpg" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section>
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/hero.webp">
+        <source media="(min-width: 601px)" srcset="/assets/images/hero.webp">
+        <img loading="lazy" decoding="async" src="/assets/images/hero.webp" alt="field" width="1920" height="1200" aria-hidden="true">
+    </picture>
+
+</section>
+                                
 
     <!-- ============================================ -->
     <!--                  Services                    -->
@@ -104,7 +112,7 @@ eleventyNavigation:
 
     <section id="services" class="services">
         <!-- Get Icons From flaticon.com -->
-        <div class="card">
+        <a href="/tour1" class="card">
             <picture>
                 <img
                 aria-hidden="true"
@@ -116,8 +124,8 @@ eleventyNavigation:
             </picture>
             <h2>Tours</h2>
             <p>Enjoy a selection of all inclusive packages departing from Port Barton, explore beautiful tropical islands or adventure on land to prestine waterfalls</p>
-        </div>
-        <div class="card">
+        </a>
+        <a href="/accomodation" class="card">
             <picture>
                 <img
                 aria-hidden="true"
@@ -129,8 +137,8 @@ eleventyNavigation:
             </picture>
             <h2>Accomodation</h2>
             <p>Come stay with our vibrant community in San Vicente on Longbeach, enjoy fire dancing workshops, beach volleyball with the locals, and drink and dine with us at our restaurant. With dorms, bungalows and beach camping we have something for everyone.</p>
-        </div>
-        <div class="card">
+        </a>
+        <a href="/transfers" class="card">
             <picture>
                 <img
                 aria-hidden="true"
@@ -142,7 +150,7 @@ eleventyNavigation:
             </picture>
             <h2>Transfers</h2>
             <p>Getting here is easy, with options on land from Puerto Princesa or boat taxis from Port Barton we can make your travels a breeze</p>
-        </div>
+        </a>
     </section>
 
     <!-- ============================================ -->
@@ -338,7 +346,78 @@ eleventyNavigation:
             <a href="/projects" class="cs-button-solid">View more on our social media</a>
         </div>
     </section>
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
 
+<section id="reviews-1672">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">What people say about us:</span>
+            <h2 class="cs-title">Reviews</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot1.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                    </picture>
+                    <span class="cs-name">
+                        Dylan
+                        <span class="cs-job">French guy</span>
+                    </span>
+                </div>
+                <div class="wrapper">
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <p class="cs-review">
+                        Sacre Bleu
+                    </p>
+                </div>
+                <!--Quote Icon-->
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/review2.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                    </picture>
+                    <span class="cs-name">
+                        Teva
+                        <span class="cs-job">Amateur Gangster</span>
+                    </span>
+                </div>
+                <div class="wrapper">
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <p class="cs-review">
+                        Not as good as France, but it was ok.
+                    </p>
+                </div>
+                <!--Quote Icon-->
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot2.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                    </picture>
+                    <span class="cs-name">
+                        Isaac
+                        <span class="cs-job">Absolute Legend</span>
+                    </span>
+                </div>
+                <div class="wrapper">
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <p class="cs-review">
+                        Yea good.
+                    </p>
+                </div>
+                <!--Quote Icon-->
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+            </li>
+        </ul>
+    </div>
+</section>
+                                
 
     {% include 'components/cta.html' %}
 {% endblock %}
