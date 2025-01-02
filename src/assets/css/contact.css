@@ -85,7 +85,7 @@
     font-family: inherit;
   }
   #cs-contact #cs-form .cs-button-solid {
-    border: none;
+    border: solid;
     width: 100%;
   }
   #cs-contact .cs-right-section {
