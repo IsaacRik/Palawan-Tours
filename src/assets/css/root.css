@@ -3821,14 +3821,16 @@
     content: "";
     width: 0%;
     height: 100%;
-    background: #000;
+    background: white;
     opacity: 1;
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    transition: width 0.3s;
+  }
+  #hero-1957 .cs-button-solid:hover {
+    color: var(--primary);
   }
   #hero-1957 .cs-button-solid:hover:before {
     width: 100%;
