@@ -1,0 +1,352 @@
+---
+title: 'Palawan Tours | Experience the best of Palawan'
+description: 'tour, accomodation, and transfer company based in San Vicente Palawan'
+preloadImg: '/assets/images/landing.jpg'
+permalink: '/'
+tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css"/>
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+
+    <!-- JSON Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "{{ client.name }}",
+            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
+            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
+            {% if client.email %}"email": "{{ client.email }}",{% endif %}
+            {% if client.address %}
+                "address": {
+                    "@type": "PostalAddress"{% if client.address.lineOne %},
+                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
+                    {% endif %}
+                    {% if client.address.city %},
+                        "addressLocality": "{{ client.address.city }}"
+                    {% endif %}
+                    {% if client.address.state %},
+                        "addressRegion": "{{ client.address.state }}"
+                    {% endif %}
+                    {% if client.address.zip %},
+                        "postalCode": "{{ client.address.zip }}"
+                    {% endif %}
+                    {% if client.address.country %},
+                        "addressCountry": "{{ client.address.country }}"
+                    {% endif %}
+                },
+            {% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+            {% if client.socials %}
+                "sameAs": [{% for platform, url in client.socials %}
+                        {% if not loop.first %},{% endif %}
+                        "{{ url }}"
+                    {% endfor %}]
+            {% endif %}
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1786">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Experience the best of Palawan</span>
+            <h1 class="cs-title">Palawan Tours</h1>
+            <p class="cs-text">
+                Tours, Transfers, and Accomodation based in the beautiful region of San Vicente
+            </p>
+            <div class="cs-button-group">
+                <a href="/tour1" class="cs-button-solid cs-button1">Plan your trip here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/hero-m.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/hero.webp">
+        <img decoding="async" src="/assets/images/hero.webp" alt="Hero Banner" width="1920" height="1200" aria-hidden="true">
+    </picture>
+
+</section>
+                                
+
+    <!-- ============================================ -->
+    <!--                  Services                    -->
+    <!-- ============================================ -->
+
+    <section id="services" class="services">
+        <!-- Get Icons From flaticon.com -->
+        <a href="/tour1" class="card">
+            <picture>
+                <img
+                aria-hidden="true"
+                decoding="async"
+                src="/assets/svgs/service1.svg"
+                alt="appliance"
+                width="48"
+                height="48"/>
+            </picture>
+            <h2>Tours</h2>
+            <p>Enjoy a selection of all inclusive packages departing from Port Barton, explore beautiful tropical islands or adventure on land to prestine waterfalls</p>
+        </a>
+        <a href="/accomodation" class="card">
+            <picture>
+                <img
+                aria-hidden="true"
+                decoding="async"
+                src="/assets/svgs/service2.svg"
+                alt="appliance"
+                width="48"
+                height="48"/>
+            </picture>
+            <h2>Accomodation</h2>
+            <p>Come stay with our vibrant community in San Vicente on Longbeach, enjoy fire dancing workshops, beach volleyball with the locals, and drink and dine with us at our restaurant. With private rooms and bungalows we have something for everyone.</p>
+        </a>
+        <a href="/transfers" class="card">
+            <picture>
+                <img
+                aria-hidden="true"
+                decoding="async"
+                src="/assets/svgs/service3.svg"
+                alt="appliance"
+                width="48"
+                height="48"/>
+            </picture>
+            <h2>Transfers</h2>
+            <p>Getting here is easy, with options on land from Puerto Princesa or boat taxis from Port Barton we can make your travels a breeze</p>
+        </a>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-left">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 600px)" srcset="/assets/images/palmtree.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/palmtree.webp">
+                    <img aria-hidden="true" decoding="async" src="palmtree.webp" alt="cabinets" loading="lazy" width="400" height="563">
+                </picture>
+                <picture class="cs-picture cs-picture2">
+                    <source media="(max-width: 600px)" srcset="/assets/images/drone.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/drone.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/drone.webp" alt="house" loading="lazy" width="400" height="563">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-right">
+                <span class="cs-topper">About Us</span>
+                <h2 class="cs-title">About Palawan Tours</h2>
+                <p class="cs-text">
+                    Palawan Tours guarantees an unforgettable experience in San Vicente by guiding visitors through its untouched beauty, from the expansive Long Beach to the tranquil island hopping excursions. Our expert local guides provide in-depth insights into the area's natural wonders, including hidden lagoons, lush forests, and vibrant marine life. With personalized itineraries, guests can enjoy exclusive activities such as kayaking through crystal-clear waters and visiting remote villages to learn about local culture. Palawan Tours ensures that every moment in San Vicente is unforgettable, offering a seamless and immersive adventure in one of Palawan's most pristine regions.</p>
+                <div class="cs-flex-group">
+                    <p class="cs-flex-p">
+                        "Palawan Tours has one mission: sharing the beauty of the San Vicente people and nature with our guests."
+                    </p>
+                    <span class="cs-name">Aivan</span>
+                    <span class="cs-job">Founder of Palawan Tours</span>
+                    <img 
+                    class="cs-quote-icon"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
+                    alt="gavel"
+                    width="136"
+                    height="77"/>
+                </div>
+                <a href="/contact" class="cs-button-solid">Contact</a>
+            </div>
+        </div>
+    </section>
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-1598">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Accomodation</span>
+            <h2 class="cs-title">Amihan Beach Hostel</h2>
+            <p class="cs-text">
+                Nestled just 20 meters from the pristine shores of Long Beach in San Vicente, Palawan, this vibrant tropical beach hostel offers a perfect blend of relaxation and adventure. Guests can unwind in comfortable accommodations ranging from cozy rooms to private bungalows, all designed with a laid-back, beachy vibe. The hostel hosts a variety of engaging workshops, from local crafts to eco-tourism, alongside thrilling sports activities like surfing and beach volleyball. In the evenings, the on-site restaurant and bar come alive, serving up delicious local dishes and refreshing cocktails with a stunning view of Long Beach. Whether you're seeking an active getaway or a peaceful retreat by the sea, this beachside haven offers something for everyone.
+            </p>
+            <a href="https://www.booking.com/hotel/ph/amihan-beach-hostel-san-vicente.en-gb.html?aid=356980&label=gog235jc-1FCAsotAFCH2FtaWhhbi1iZWFjaC1ob3N0ZWwtc2FuLXZpY2VudGVICVgDaLQBiAEBmAEJuAEYyAEP2AEB6AEB-AECiAIBqAIEuALl--K7BsACAdICJDNmZDNjNGY0LWM2YjAtNDVmYy1hNzQzLTFkZTA3YzhjNTExM9gCBeACAQ&sid=c0865119ce142d211f856af7d92eef67&checkin=2025-01-04&checkout=2025-01-05&dest_id=-2452200&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1735966185&srpvid=636521f348bc0204&type=total&ucfs=1&#no_availability_msg" target = "_blank" class="cs-button-solid">Book Here</a>
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/hammock.webp">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/hammock.webp">
+                <img loading="lazy" decoding="async" src="/assets/images/hammock.webp" alt="people" width="608" height="406">
+            </picture>
+        </div>
+        <div class="cs-stats-group">
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/hostel2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/hostel2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/hostel2.jpg" alt="people" width="608" height="662">
+            </picture>
+            <ul class="cs-stats">
+                <li class="cs-stat">
+                    <span class="cs-number">100%</span>
+                    <span class="cs-desc">Positive feedback</span>
+                </li>
+                <li class="cs-stat">
+                    <span class="cs-number">10</span>
+                    <span class="cs-desc">Minutes from San Vicente</span>
+                </li>
+                <li class="cs-stat">
+                    <span class="cs-number">20m</span>
+                    <span class="cs-desc">From Long Beach</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+                                
+    <!-- ============================================ -->
+    <!--            Extra Content To Rank             -->
+    <!-- ============================================ -->
+
+    <section id="sbs-r">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-left">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 600px)" srcset="/assets/images/sunset.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/sunset.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/sunset.jpg" alt="house" loading="lazy" width="400" height="560">
+                </picture>
+                <picture class="cs-picture cs-picture2">
+                    <source media="(max-width: 600px)" srcset="/assets/images/palmtree2.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/palmtree2.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/palmtree2.jpg" alt="cabinets" loading="lazy" width="400" height="560">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-right">
+                <span class="cs-topper">San Vicente</span>
+                <h2 class="cs-title">A tropical paradise</h2>
+                <p class="cs-text">
+                    San Vicente, located on the northwest coast of Palawan, is a hidden gem known for its vibrant local community and breathtaking natural beauty. The region boasts pristine beaches, lush forests, and crystal-clear waters, making it a haven for nature lovers and adventure seekers alike. Long Beach, the longest white sand beach in the Philippines, stretches over 14 kilometers, offering a serene escape. The area’s tropical climate provides warm, sunny days ideal for outdoor activities and relaxation year-round. San Vicente is also home to a friendly and welcoming community that celebrates its cultural heritage through festivals and local traditions. Whether you're exploring the lush surroundings or engaging with the locals, San Vicente offers a perfect balance of natural wonder and rich culture.
+                </p>
+                <a href="/blog" class="cs-button-solid">Read our Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   Gallery                    -->
+    <!-- ============================================ -->
+
+    <section id="gallery">
+        <div class="cs-container">
+            <span class="cs-topper">Gallery</span>
+            <h2 class="cs-title">What to expect</h2>
+            <div class="cs-image-group">
+                <!-- Row 1-->
+                <div class="cs-row cs-row-1">
+                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+                    <picture class="cs-picture cs-picture1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/gallery1.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/gallery1.webp">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/gallery1.webp" alt="new hallway" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/gallery2.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/gallery2.webp">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/gallery2.webp" alt="new home construction" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/gallery5.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/gallery5.webp">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/gallery5.webp" alt="building a new wall" loading="lazy" width="400" height="560">
+                    </picture>
+                </div>
+                <!-- Row 2 -->
+                <div class="cs-row cs-row-2">
+                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+                    <picture class="cs-picture cs-picture1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/gallery3.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/gallery3.webp">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/gallery3.webp" alt="new kitchen" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/gallery4.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/gallery4.webp">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/gallery4.webp" alt="apartment addition" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/gallery6.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/gallery6.webp">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/gallery6.webp" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
+                    </picture>
+                </div>
+                <!-- Row 3 -->
+                <div class="cs-row cs-row-3">
+                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+                    <picture class="cs-picture cs-picture1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/gallery7.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/gallery7.webp">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/gallery7.webp" alt="new kitchen" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/gallery8.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/gallery8.webp">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/gallery8.webp" alt="apartment addition" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/gallery9.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/gallery9.webp">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/gallery9.webp" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
+                    </picture>
+
+                </div>
+            </div>
+            <a target = "_blank" href="https://www.instagram.com/amihanbeachhostel/" class="cs-button-solid">View more on our social media</a>
+        </div>
+    </section>
+                                
+
+    {% include 'components/cta.html' %}
+{% endblock %}
