@@ -349,9 +349,6 @@
     margin: auto;
     max-width: 82.625em;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   #gallery .cs-topper {
     margin-bottom: 1rem;
